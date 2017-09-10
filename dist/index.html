@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Distrelec Tech Test - Front End Engineer</title>
+</head>
+ 
+           <table class="customer-related-products" border="2">
+          <thead>
+                    <th>Code</th>
+                    <th>ERP Code</th>
+                    <th>Type Name</th>
+                    <th>Price</th>
+                </thead>
+              <tbody>
+        
+               </tbody>
+           </table>
+        
+        
+<body>
+<!-- Good Luck! The Dev Gods Are Watching You. -->
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script> 
+$(function() {
+
+
+   var carouselData = [];
+
+   $.getJSON('https://gist.githubusercontent.com/roblos12/151417b9d5bcd444a2351b6d58db3fdc/raw/acc7ed077a9eb0cba0651bf9759d7b58cacc83c3/data.json', function(data) {
+       $.each(data.carouselData, function(i, f) {
+          var tableCarousel = "<tr>" + "<td>" + f.code + "</td>" +
+           "<td>" + f.erpCode + "</td>" + "<td>" + f.typeName + "</td>" + "<td>" + f.price.formattedValue + "</td>" + "</tr>"
+           $(tableCarousel).appendTo(".customer-related-products");
+     });
+
+   });
+
+});
+
+</script>
+</html>
