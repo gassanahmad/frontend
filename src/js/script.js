@@ -1,7 +1,7 @@
 // Carousel Slider Settings
 function relatedProductsSlider() {
 
-    $('.customer-related-products').slick({
+    $('.relatedProducts').slick({
         vertical: true,
         slidesToShow: 4,
         slidesToScroll: 2,
@@ -46,11 +46,11 @@ $(document).ready(function () {
 
 
         $.each(data.carouselData, function (i, f) {
-            var carouselItem = "<div class='carousel-item'><div class='panel panel-default'><div class='panel-heading '><h3 class='panel-title '><a href='" + f.url + "'>" + f.name + "</a></h3></div><div class='panel-body'><div class='row'><div class='col-xs-12 col-sm-6'><a href='" + f.url + "'><img data-lazy='" + f.productImageUrl + "' class='img-responsive center-block' alt='" + f.productImageAltText + "' title='"+ f.name +"'></a><span class='salesUnit'>Price Per " + f.salesUnit + "</span></div><div class='col-xs-12 col-sm-6'><span>Stock: 0</span><h4 class='price'>" + f.price.currency + ' ' + f.price.formattedValue + "</h4><a class='btn btn-primary btn-block' href='" + f.url + "'>Buy Now</a></div></div></div></div></div>'"
+            var carouselItem = "<div class='carousel__item'><div class='panel panel-default panel--white'><div class='panel-heading '><h3 class='panel-title '><a href='" + f.url + "'>" + f.name + "</a></h3></div><div class='panel-body'><div class='row'><div class='col-xs-12 col-sm-6'><a href='" + f.url + "'><img data-lazy='" + f.productImageUrl + "' class='img-responsive center-block' alt='" + f.productImageAltText + "' title='"+ f.name +"'></a><span class='salesUnit'>Price Per " + f.salesUnit + "</span></div><div class='col-xs-12 col-sm-6'><span>Stock: 0</span><h4 class='price'>" + f.price.currency + ' ' + f.price.formattedValue + "</h4><a class='btn btn-primary btn-block' href='" + f.url + "'>Buy Now</a></div></div></div></div></div>'"
 
 
 
-            $(carouselItem).appendTo(".customer-related-products");
+            $(carouselItem).appendTo(".relatedProducts");
         });
 
         // Initilize Carousel

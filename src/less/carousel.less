@@ -1,0 +1,133 @@
+///// Variables /////
+
+// Colours
+@brand-red: #de1417;
+@brand-blue: #009fb4;
+@brand-gray: #333;
+@white: #fff;
+
+// Spacing
+
+@spacing-base: 15px;
+@spacing-base-x1: @spacing-base;
+@spacing-base-x2: @spacing-base * 2;
+@spacing-base-x3: @spacing-base * 3;
+@spacing-base-x4: @spacing-base * 4;
+
+// Type
+
+h3 {
+    color: @brand-red;
+    @media screen and (max-width: @screen-xs-max) {
+        font-size: @font-size-large;
+    }
+}
+
+// Carousel Block
+
+.relatedProducts {
+    margin: 30px 0;
+    @media screen and (max-width: @screen-xs-max) {
+        margin: 0 @spacing-base-x1;
+    }
+    // Element
+    .carousel__item {
+        @media screen and (max-width: @screen-xs-max) {
+            margin: 0 @spacing-base-x1;
+        }
+        a {
+            &:focus {
+                outline: none
+            }
+        }
+        // Modifiers
+        .panel--white {
+            border: 1px solid @gray-lighter;
+            border-radius: 0;
+            .panel-heading {
+                min-height: 55px;
+                display: flex;
+                align-items: center;
+                background: transparent;
+                border-bottom: 0;
+                .panel-title {
+                    color: @brand-gray;
+                    font-weight: bold;
+                }
+            }
+            .panel-body {
+                @media screen and (min-width: @screen-sm-min) {
+                    padding: 0 @spacing-base-x1;
+                }
+                min-height: 135px;
+                .img-responsive {
+                    margin-bottom: 10px;
+                }
+                .price {
+                    color: @gray-light;
+                    font-weight: bold;
+                    font-size: @font-size-base * 1.5;
+                }
+                .salesUnit {
+                    font-size: 12px;
+                }
+                .btn-primary {
+                    .button-variant(@white;
+                     @brand-blue;
+                    @brand-blue);
+                }
+            }
+        }
+    }
+    .slick-prev,
+    .slick-next {
+        z-index: 1000;
+    }
+    .slick-prev {
+                left: -20px;
+        &:before {
+            content: @fa-var-angle-left;
+        }
+        @media screen and (min-width: @screen-sm-min) {
+            top: -26px;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+            &:before {
+                content: @fa-var-angle-up;
+                border-radius: 5px 5px 0 0;
+            }
+        }
+
+    }
+    .slick-next {
+                right: -20px;
+        &:before {
+            content: @fa-var-angle-right;
+        }
+        @media screen and (min-width: @screen-sm-min) {
+            bottom: -7px;
+            left: 50%;
+            top: auto;
+            right: auto;
+            transform: translateX(-50%);
+            &:before {
+                content: @fa-var-angle-down;
+                border-radius: 0 0 5px 5px;
+            }
+        }
+
+    }
+    .slick-arrow {
+        &:before {
+            background: @brand-red;
+        }
+        @media screen and (min-width: @screen-sm-min) {
+            width: 100%;
+            &:before {
+                background: @brand-red;
+                width: 80px
+            }
+        }
+    }
+}
