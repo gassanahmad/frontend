@@ -1,0 +1,25 @@
+{
+  "name": "src",
+  "version": "0.0.1",
+  "description": "Carousel Demo",
+  "main": "grunt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gassanahmad/frontend.git"
+  },
+  "author": "Gassan Ahmad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gassanahmad/frontend/issues"
+  },
+  "homepage": "https://github.com/gassanahmad/frontend#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "jit-grunt": "^0.10.0"
+  }
+}
